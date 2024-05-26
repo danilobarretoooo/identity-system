@@ -1,21 +1,27 @@
-package com.example.demo.model;
+package com.unijorge.model;
 
 
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDateTime;
+
+
 
 @Entity
-public class Identity {
+@Getter
+@Setter
+public class Denuncia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String fullName;
-    private String dateOfBirth;
-    private String placeOfBirth;
-    private String identityNumber;
+    private String descricao;
+    private LocalDateTime dataHora;
+    private String status;
 
     // Getters and Setters
 }
